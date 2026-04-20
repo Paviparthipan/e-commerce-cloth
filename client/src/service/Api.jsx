@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 const api = axios.create({
-    baseURL: "http://localhost:5000/stylehub"
+    baseURL: "https://e-commerce-cloth.onrender.com/stylehub"
 })
 
 export default api;
@@ -32,7 +32,7 @@ api.interceptors.response.use(
             try {
                 const refreshToken = localStorage.getItem("refreshToken");
                 const res = await axios.post(
-                    "http://localhost:5000/stylehub/clientRefreshToken",
+                    "https://e-commerce-cloth.onrender.com/stylehub/clientRefreshToken",
                     { token: refreshToken }
                 )
                 const newAccessToken = res.data.accessToken;

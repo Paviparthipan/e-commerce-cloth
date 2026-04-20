@@ -165,7 +165,7 @@ export const Products = () => {
 
                 <tr key={p._id} className='text-lg '>
                   <td className='px-3 py-2  rounded-sm'> {index + 1}  </td>
-                  <td className='px-3 py-2  rounded-sm'>   <img src={`http://localhost:5000${p.img}`} alt="" height="20px" width="30px" />  </td>
+                  <td className='px-3 py-2  rounded-sm'>   <img src={`https://e-commerce-cloth.onrender.com/${p.img}`} alt="" height="20px" width="30px" />  </td>
                   <td className='px-3 py-2  rounded-sm'>{p.name.slice(0, 15)}</td>
                   <td className='px-3 py-2  rounded-sm'>{p.price}</td>
                   <td className='px-3 py-2  rounded-sm'> {p.stock} </td>

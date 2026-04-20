@@ -127,7 +127,7 @@ export const Cart = () => {
             {
               cart.map((p) => (
                 <tr key={p._id + p.size}>
-                  <td className='border border-gray-300 px-4 py-2 text-center'><img className='w-10' src={`http://localhost:5000${p.img}`} alt="" /></td>
+                  <td className='border border-gray-300 px-4 py-2 text-center'><img className='w-10' src={`https://e-commerce-cloth.onrender.com/${p.img}`} alt="" /></td>
                   <td className='border border-gray-300 px-4 py-2 text-center' >{p.name}</td>
                   <td className='border border-gray-300 px-4 py-2 text-center'> {p.qty} -- {p.size}</td>
                   <td className='border border-gray-300 px-4 py-2 text-center'> ₹{p.price} </td>
