@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: "https://e-commerce-cloth.onrender.com//stylehub"
+    baseURL: "https://e-commerce-cloth.onrender.com/stylehub"
 });
 
 export default api;

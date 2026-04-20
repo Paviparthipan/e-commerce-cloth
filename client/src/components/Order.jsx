@@ -39,7 +39,7 @@ export const Order = () => {
                             <div key={item.productId + item.size} className="flex gap-3 mt-2">
 
                                 <img
-                                    src={`https://e-commerce-cloth.onrender.com/${item.img}`}
+                                    src={`https://e-commerce-cloth.onrender.com${item.img}`}
                                     className="w-16 h-16"
                                 />
 

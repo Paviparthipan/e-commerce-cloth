@@ -78,23 +78,23 @@ export const Overview = () => {
                     <ul className='hidden md:block'>
 
                         <li>
-                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com/${product.img}`} alt="" />
+                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com${product.img}`} alt="" />
 
                         </li>
                         <li>
-                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com/${product.img}`} alt="" />
+                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com${product.img}`} alt="" />
 
                         </li>
                         <li>
-                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com/${product.img}`} alt="" />
+                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com${product.img}`} alt="" />
 
                         </li>
                         <li>
-                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com/${product.img}`} alt="" />
+                            <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com${product.img}`} alt="" />
 
                         </li>
                     </ul>
-                    <img className=' lg:w-100 w-70' src={`https://e-commerce-cloth.onrender.com/${product.img}`} alt="" />
+                    <img className=' lg:w-100 w-70' src={`https://e-commerce-cloth.onrender.com${product.img}`} alt="" />
 
                 </div>
                 <div>

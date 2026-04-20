@@ -40,7 +40,7 @@ export const Main = () => {
               <li onClick={() => navigate("/product", { state: p })} className='h-auto rounded-lg shadow-xl p-2 mt-10  hover:scale-110 transition cursor-pointer  w-50' key={p._id}>
 
                 <span>
-                  <img src={`https://e-commerce-cloth.onrender.com/${p.img}`} alt="" />
+                  <img src={`https://e-commerce-cloth.onrender.com${p.img}`} alt="" />
                 </span>
                 <span className='text-sm'>
                   {p.name}
