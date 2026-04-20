@@ -13,7 +13,9 @@ import orderRoutes from "./router/orderRoutes.js";
 dotenv.config();
 const app = express();
 ConnectDB()
-app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
 app.use(express.json());
 
 app.use("/stylehub", AdminRouter)
