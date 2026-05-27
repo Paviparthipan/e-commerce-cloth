@@ -64,18 +64,18 @@ export const Overview = () => {
 
 
     return (
-        <div className='bg-pink-100'>
+        <div className='bg-pink-100 min-h-screen'>
 
             <Nav />
 
-            <div className='flex p-5 pt-25 lg:p-25 gap-5 flex-wrap lg:gap-5 justify-evenly'>
+            <div className='pt-20 px-4 pb-10 md:px-10'>
 
 
 
 
 
-                <div className='flex '>
-                    <ul className='hidden md:block'>
+                <div className='w-full lg:w-1/2 flex flex-col gap-4'>
+                    <ul className='hidden md:grid md:grid-cols-2 gap-3'>
 
                         <li>
                             <img className='lg:h-30 h-25' src={`https://e-commerce-cloth.onrender.com${product.img}`} alt="" />
@@ -99,7 +99,7 @@ export const Overview = () => {
                 </div>
                 <div>
 
-                    <div className='text-wrap w-100 '>
+                    <div className='space-y-5 w-full'>
                         <h2 className='text-xl mt-5 md:text-2xl lg:text-3xl '>
                             {product.name}
                         </h2>

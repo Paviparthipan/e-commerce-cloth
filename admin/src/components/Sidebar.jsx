@@ -23,7 +23,7 @@ export const Sidebar = () => {
 
 
     return (
-        <div className={  ` border-r-2 ${dark? "bg-gray-900 text-white" : "bg-gray-200 text-black"} top-0   md:h-screen scroll` }>
+        <div className={`border-r-2 ${dark ? "bg-gray-900 text-white" : "bg-gray-200 text-black"} top-0 w-full md:w-60 md:h-screen scroll`}>
 
 
             <div className=' flex md:flex-col justify-evenly  items-center p-2  '>
@@ -50,7 +50,7 @@ export const Sidebar = () => {
                           px-4 py-2 
                         
                           hover:underline md:hover:no-underline
-                        ${dark? "md:hover:bg-gray-600" :"md:hover:bg-blue-600 md:hover:text-amber-50"}    rounded`}>
+                        ${dark ? "md:hover:bg-gray-600" : "md:hover:bg-blue-600 md:hover:text-amber-50"}    rounded`}>
                             Home
                         </Link>
 
@@ -59,7 +59,7 @@ export const Sidebar = () => {
 
                         <Link to="Products" className={`md:block 
                           px-4 py-2 
-                          ${dark? "md:hover:bg-gray-600" :"md:hover:bg-blue-600 md:hover:text-amber-50"}  rounded`}>
+                          ${dark ? "md:hover:bg-gray-600" : "md:hover:bg-blue-600 md:hover:text-amber-50"}  rounded`}>
                             Products
 
                         </Link>
@@ -69,7 +69,7 @@ export const Sidebar = () => {
 
                         <Link to="Order" className={`md:block 
                           px-4 py-2
-                           rounded ${dark? "md:hover:bg-gray-600" :"md:hover:bg-blue-600 md:hover:text-amber-50"}  `}>
+                           rounded ${dark ? "md:hover:bg-gray-600" : "md:hover:bg-blue-600 md:hover:text-amber-50"}  `}>
                             Orders
 
                         </Link>

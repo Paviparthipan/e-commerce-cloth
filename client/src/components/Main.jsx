@@ -15,7 +15,7 @@ export const Main = () => {
   return (
     <div className='bg-pink-100 '>
 
-      <div className='bg-bottom md:bg-right bg-contain md:px-20  bg-no-repeat  h-180 '
+      <div className='bg-bottom md:bg-right bg-contain md:px-10 bg-no-repeat min-h-[28rem]'
         style={{ backgroundImage: `url(${hero_img})` }}
       >
         <p className='text-sm font-semibold pt-45 pl-10 md:pt-25 md:text-xl lg:text-2xl '>New Arrivals Only</p>
@@ -37,7 +37,7 @@ export const Main = () => {
         <div className=' '>
           <ul className='flex flex-wrap px-10 justify-evenly gap-5'>
             {randData.map((p) => (
-              <li onClick={() => navigate("/product", { state: p })} className='h-auto rounded-lg shadow-xl p-2 mt-10  hover:scale-110 transition cursor-pointer  w-50' key={p._id}>
+              <li onClick={() => navigate("/product", { state: p })} className='h-auto rounded-lg shadow-xl p-4 mt-10 hover:scale-105 transition cursor-pointer w-full sm:w-[240px]' key={p._id}>
 
                 <span>
                   <img src={`https://e-commerce-cloth.onrender.com${p.img}`} alt="" />
@@ -45,14 +45,14 @@ export const Main = () => {
                 <span className='text-sm'>
                   {p.name}
                 </span>
-                   <span className='flex gap-3'>
+                <span className='flex gap-3'>
 
-                <p className='font-semibold text-gray-600 line-through'>
-                  ₹   {p.price + 25}
-                </p>
-                <p className='font-semibold'>
-                  ₹   {p.price }
-                </p>
+                  <p className='font-semibold text-gray-600 line-through'>
+                    ₹   {p.price + 25}
+                  </p>
+                  <p className='font-semibold'>
+                    ₹   {p.price}
+                  </p>
                 </span>
 
               </li>

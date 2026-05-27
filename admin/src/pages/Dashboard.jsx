@@ -22,17 +22,12 @@ export const Dashboard = () => {
   }, [])
 
   return (
-    <div className=' md:flex'>
-      <div className='fixed top-0 z-10 md:z-0  w-full  lg:w-75 md:w-60' >
+    <div className='md:flex'>
+      <div className='fixed top-0 z-10 w-full md:relative md:w-60 lg:w-[19rem]'>
 
         <Sidebar />
       </div>
-      <div className={` ${dark? "bg-gray-950 text-white " : "bg-gray-200"}  w-full
-       md:overflow-y-auto
-         
-          md:ml-60 lg:ml-75
-           md:mt-0 
-           `}>
+      <div className={` ${dark? "bg-gray-950 text-white " : "bg-gray-200"}  w-full md:overflow-y-auto md:ml-60 lg:ml-[19rem] md:mt-0 mt-52`}>
 
         <Outlet />
       </div>

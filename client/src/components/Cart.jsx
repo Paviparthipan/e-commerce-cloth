@@ -4,9 +4,9 @@ import api from '../service/Api'
 
 export const Cart = () => {
 
-  const { cart, setCart ,getMyOrder, orderHistory} = useContext(CartContext);
+  const { cart, setCart, getMyOrder, orderHistory } = useContext(CartContext);
 
-  
+
 
   const removeCartItem = (id, s) => {
 
@@ -69,7 +69,7 @@ export const Cart = () => {
   }
 
 
- 
+
 
 
 
@@ -92,7 +92,7 @@ export const Cart = () => {
 
 
   return (
-    <div className='bg-pink-100 px-15 py-10'>
+    <div className='bg-pink-100 px-4 py-10 md:px-10'>
 
 
       {cart.length === 0 ?
@@ -149,7 +149,7 @@ export const Cart = () => {
       {cart.length > 0 &&
 
         <div className='flex justify-between flex-wrap p-5'>
-          <div className=' w-full md:w-59 lg:w-100'>
+          <div className='w-full lg:w-1/2'>
             <h3 className='text-2xl'>
               Cart Total
             </h3>
@@ -173,17 +173,17 @@ export const Cart = () => {
               <input type="text" required name="cusName"
                 value={address.cusName}
                 onChange={handleChange}
-                placeholder='Name' className='border block mt-3 w-75 px-4 py-2 rounded ' />
+                placeholder='Name' className='border block mt-3 w-full md:w-[24rem] px-4 py-2 rounded ' />
               <input type="number" required name="cusNumber"
                 value={address.cusNumber}
                 placeholder='Number'
                 onChange={handleChange}
-                className='border block mt-3 w-75 px-4 py-2 rounded ' />
+                className='border block mt-3 w-full md:w-[24rem] px-4 py-2 rounded ' />
               <input type="text"
                 required name="cusAddress"
                 value={address.cusAddress}
                 onChange={handleChange}
-                placeholder='Address' className='border block mt-3 w-75 px-4 py-2 rounded ' />
+                placeholder='Address' className='border block mt-3 w-full md:w-[24rem] px-4 py-2 rounded ' />
               <button type='submit' className=' bg-red-600 px-3 py-2 mt-3 text-white rounded hover:bg-red-800'>Checkout</button>
             </form>
           </div>
@@ -192,6 +192,6 @@ export const Cart = () => {
       }
 
 
-     </div>
+    </div>
   )
 }

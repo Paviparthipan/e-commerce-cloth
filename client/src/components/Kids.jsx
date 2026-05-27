@@ -39,7 +39,7 @@ export const Kids = () => {
         <div className=' '>
           <ul className='flex flex-wrap px-10 justify-evenly gap-5'>
             {products.map((p) => (
-              <li onClick={() => navigate("/product", { state: p })} className='h-auto rounded-lg shadow-xl p-2 mt-10  hover:scale-110 transition cursor-pointer  w-50' key={p._id}>
+              <li onClick={() => navigate("/product", { state: p })} className='h-auto rounded-lg shadow-xl p-4 mt-10 hover:scale-105 transition cursor-pointer w-full sm:w-[240px]' key={p._id}>
 
                 <span>
                   <img src={`https://e-commerce-cloth.onrender.com${p.img}`} alt="" />
@@ -49,12 +49,12 @@ export const Kids = () => {
                 </span>
                 <span className='flex gap-3'>
 
-                <p className='font-semibold text-gray-600 line-through'>
-                  ₹   {p.price + 25}
-                </p>
-                <p className='font-semibold'>
-                  ₹   {p.price }
-                </p>
+                  <p className='font-semibold text-gray-600 line-through'>
+                    ₹   {p.price + 25}
+                  </p>
+                  <p className='font-semibold'>
+                    ₹   {p.price}
+                  </p>
                 </span>
               </li>
             ))}

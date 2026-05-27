@@ -51,7 +51,7 @@ export const RegLogin = () => {
       localStorage.setItem("accessToken", res.data.accessToken)
       localStorage.setItem("refreshToken", res.data.refreshToken)
       localStorage.setItem("User", JSON.stringify(res.data.userDetail))
-    
+
 
       navigate("/Store")
 
@@ -71,10 +71,10 @@ export const RegLogin = () => {
 
 
 
-    <div className='h-screen bg-pink-100 flex justify-center items-center'>
+    <div className='min-h-screen bg-pink-100 flex items-center justify-center px-4 py-10'>
 
       {tog ? (
-        <div className='  p-15 bg-white rounded shadow-2xl '>
+        <div className='w-full max-w-md p-8 bg-white rounded-3xl shadow-2xl'>
 
           <form action="" onSubmit={register}>
 
@@ -87,7 +87,7 @@ export const RegLogin = () => {
               onChange={handleChange}
               required
               placeholder='User Name'
-              className='px-3 border rounded w-75 block py-2 mt-5 '
+              className='px-3 border rounded w-full block py-2 mt-5 '
             />
             <input type="text"
               name='email'
@@ -95,7 +95,7 @@ export const RegLogin = () => {
               onChange={handleChange}
               required
               placeholder='Email'
-              className=' px-3 border rounded w-75 block py-2 mt-5'
+              className='px-3 border rounded w-full block py-2 mt-5'
             />
             <input type="password"
               name='password'
@@ -103,9 +103,9 @@ export const RegLogin = () => {
               onChange={handleChange}
               required
               placeholder='Password'
-              className=' px-3 border rounded w-75 block py-2 mt-5' />
+              className=' px-3 border rounded w-full block py-2 mt-5' />
             <button type='submit'
-              className='bg-red-600 w-75 py-2 mt-5 rounded
+              className='bg-red-600 w-full py-2 mt-5 rounded
               text-white cursor-pointer'>
               Continue
             </button>
@@ -126,7 +126,7 @@ export const RegLogin = () => {
         </div>
       ) : (
 
-        <div className='  p-15 bg-white rounded shadow-2xl '>
+        <div className='w-full max-w-md p-8 bg-white rounded-3xl shadow-2xl'>
 
           <form action="" onSubmit={login}>
 
@@ -141,7 +141,7 @@ export const RegLogin = () => {
               onChange={handleChangeLogin}
               required
               placeholder='Email'
-              className=' px-3 border rounded w-75 block py-2 mt-5' />
+              className=' px-3 border rounded w-full block py-2 mt-5' />
             <input
               type="password"
               name="password"
@@ -149,8 +149,8 @@ export const RegLogin = () => {
               onChange={handleChangeLogin}
               required
               placeholder='Password'
-              className=' px-3 border rounded w-75 block py-2 mt-5' />
-            <button className='bg-red-600 w-75 py-2 mt-5 rounded text-white cursor-pointer'>Continue</button>
+              className='px-3 border rounded w-full block py-2 mt-5' />
+            <button className='bg-red-600 w-full py-2 mt-5 rounded text-white cursor-pointer'>Continue</button>
 
             <p className='mt-3'>Create an account?
               <span onClick={toggle}

@@ -25,7 +25,7 @@ export const Order = () => {
 
 
     return (
-        <div className='px-15 py-10 bg-pink-100'>
+        <div className='min-h-screen bg-pink-100 px-4 py-10 md:px-10'>
 
             {orderHistory && orderHistory.map(order => (
                 <div key={order._id} className="border p-4 mt-5 rounded">
@@ -56,8 +56,9 @@ export const Order = () => {
                             </div>
                         ))}
                     </div>
-                    {order.status === "delivered" || "reject" ? "" :
-                        <button onClick={() => acceptOrder(order._id, "reject")} className='text-blue-600 cursor-pointer mt-4 ml-19'>Cancel Order</button>
+                    {order.status !== "delivered" && order.status !== "reject" ?
+                        <button onClick={() => acceptOrder(order._id, "reject")} className='text-blue-600 cursor-pointer mt-4 ml-4'>Cancel Order</button>
+                        : ''
                     }
 
                     {order.status === "shipping" && <button onClick={() => acceptOrder(order._id, "delivered")} className='text-blue-600 cursor-pointer mt-4 ml-5'>Delivery Recieved</button>}

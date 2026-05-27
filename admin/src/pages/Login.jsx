@@ -48,10 +48,10 @@ export const Login = () => {
 
 
 
-        <div className='bg-gray-200'>
+        <div className='min-h-screen bg-gray-200'>
 
-            <div className='flex h-screen justify-center  items-center text-center '>
-                <form action="" onSubmit={handleSubmit} className='rounded-lg shadow-2xl w-100 h-100  p-12 bg-white'>
+            <div className='flex min-h-screen items-center justify-center p-4 text-center'>
+                <form action="" onSubmit={handleSubmit} className='w-full max-w-sm rounded-3xl bg-white p-8 shadow-2xl'>
                     <h2 className='text-xl font-semibold '>Admin Login</h2>
 
                     <input type="text"
@@ -59,14 +59,14 @@ export const Login = () => {
                         value={formData.userName}
                         onChange={handleChange}
                         placeholder='Admin'
-                        className='block border rounded-sm mt-13 py-2 px-3 w-full' />
+                        className='block w-full rounded-lg border px-3 py-2 mt-4' />
                     <input type="password"
                         name='password'
                         value={formData.password}
                         onChange={handleChange}
                         placeholder='Admin@123'
                         className='block border rounded-sm mt-8 py-2 px-3 w-full' />
-                    <button type='submit' className='border px-2 py-2 hover:bg-red-700 bg-red-500 mt-6 text-white rounded-sm w-50'>Continue</button>
+                    <button type='submit' className='w-full rounded-lg bg-red-500 px-4 py-2 mt-6 text-white hover:bg-red-700'>Continue</button>
                 </form>
             </div>
 

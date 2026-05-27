@@ -107,15 +107,16 @@ export const Products = () => {
   return (
     <div className='relative '>
 
-      <div className={`fixed  md:top-0 border  top-14 w-full flex justify-between   p-3  ${dark ? "bg-gray-900" : "bg-white"}`}>
-        <h2 className='font-semibold text-2xl ml-12  '>
-          Product Overview
-        </h2>
-        <button onClick={toggleProduct} className='bg-red-600 md:mr-80 text-white px-3 rounded hover:bg-red-800 cursor-pointer'>
-          Add Product
-        </button>
+      <div className={`fixed top-14 md:top-0 w-full border p-3 ${dark ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+        <div className='max-w-7xl mx-auto flex flex-col gap-4 md:flex-row md:items-center md:justify-between'>
+          <h2 className='font-semibold text-2xl'>
+            Product Overview
+          </h2>
+          <button onClick={toggleProduct} className='bg-red-600 text-white px-3 py-2 rounded hover:bg-red-800 cursor-pointer'>
+            Add Product
+          </button>
+        </div>
       </div>
-
 
       {tog &&
         <div className={`  ${dark ? "" : ""} fixed inset-0  
@@ -125,17 +126,17 @@ export const Products = () => {
           relative rounded-2xl shadow-2xl p-5`}>
             <h2 className='text-lg font-semibold text-center'>Add New Product</h2>
             <button onClick={toggleProduct} className='absolute top-4 right-5 hover:bg-red-600 rounded-2xl w-6 hover:text-white '>x</button>
-            <form onSubmit={handleSubmit} className='h-100 w-100  flex mt-5 items-center  flex-col'>
+            <form onSubmit={handleSubmit} className='w-full max-w-xl flex mt-5 items-center flex-col'>
 
 
 
-              <input name="name" value={form.name} required placeholder="Name" onChange={handleChange} className=' border mt-2 w-75  px-4 py-2 rounded ' />
-              <input name="price" value={form.price} required placeholder="Price" onChange={handleChange} className=' border mt-2 w-75 px-4 py-2 rounded' />
-              <input name="category" value={form.category} required placeholder="Category" onChange={handleChange} className=' border mt-2 w-75 px-4 py-2 rounded' />
-              <input name="stock" value={form.stock} required placeholder="Stock" onChange={handleChange} className=' border mt-2 w-75 px-4 py-2 rounded' />
-              <input name="dis" value={form.dis} required placeholder="description" onChange={handleChange} className=' border mt-2 w-75 px-4 py-2 rounded' />
+              <input name="name" value={form.name} required placeholder="Name" onChange={handleChange} className='border mt-2 w-full px-4 py-2 rounded' />
+              <input name="price" value={form.price} required placeholder="Price" onChange={handleChange} className='border mt-2 w-full px-4 py-2 rounded' />
+              <input name="category" value={form.category} required placeholder="Category" onChange={handleChange} className='border mt-2 w-full px-4 py-2 rounded' />
+              <input name="stock" value={form.stock} required placeholder="Stock" onChange={handleChange} className='border mt-2 w-full px-4 py-2 rounded' />
+              <input name="dis" value={form.dis} required placeholder="description" onChange={handleChange} className='border mt-2 w-full px-4 py-2 rounded' />
 
-              <input type="file" required onChange={handleFile} className='border mt-2 w-45 px-4 py-2 rounded' />
+              <input type="file" required onChange={handleFile} className='border mt-2 w-full px-4 py-2 rounded' />
 
               <button type="submit" className='bg-orange-700 px-3 py-1 mt-4 rounded cursor-pointer hover:bg-orange-800 text-white'>Add Product</button>
             </form>
@@ -143,10 +144,10 @@ export const Products = () => {
 
         </div>}
 
-      <div className='pt-3 md:pt-0 text-center flex justify-center border '>
+      <div className='pt-24 md:pt-20 text-center flex justify-center border '>
 
         {data.length === 0 ? <p className='text-center text-red-800 font-semibold'>No Product available</p> :
-          <table className='mt-25   border-separate border-spacing-4 w-3/4 '>
+          <table className='mt-8 border-separate border-spacing-4 w-full'>
             <thead>
               <tr className='bg-blue-500 text-white'>
 

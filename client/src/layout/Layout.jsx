@@ -43,15 +43,15 @@ export const Layout = () => {
                     <Nav />
 
                 </div>
-                <div className='mt-17'>
+                <div className='pt-20'>
                     <Outlet />
                 </div>
                 <div>
                     <Footer />
                 </div>
             </div>
-     
-     
+
+
         </StoreContext.Provider>
     )
 }

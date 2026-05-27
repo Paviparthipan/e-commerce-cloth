@@ -62,7 +62,7 @@ export const Home = () => {
 
 
 
-    <div className='pt-20  md:pt-10 mx-5 h-screen relative'>
+    <div className='pt-24 md:pt-10 mx-5 min-h-screen relative'>
 
       <div className='ml-13'>
         <p className='text-xl '>
